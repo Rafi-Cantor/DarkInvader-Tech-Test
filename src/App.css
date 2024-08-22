@@ -1,0 +1,136 @@
+.main-content {
+  width: 100%;
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.table-container {
+  height: 600px;
+  overflow: auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+th {
+  text-align: left;
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 12px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.card-layout {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.card-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card-content li {
+  margin-bottom: 8px;
+}
+
+.back-button {
+  display: block;
+  text-align: center;
+  padding: 25px 0;
+  width: auto;
+}
+
+@media (max-width: 800px) {
+  .main-content{
+    padding: 0 10px;
+  }
+
+  td {
+    padding: 3px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .card-layout {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    border: 0;
+    min-width: 0;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  td {
+    display: block;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td::before{
+    content: attr(data-cell);
+    padding-right: 5px;
+    font-weight: 700;
+  }
+
+}

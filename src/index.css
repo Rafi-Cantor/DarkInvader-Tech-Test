@@ -1,0 +1,32 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --border-color: #ddd;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+p, li {
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+}
